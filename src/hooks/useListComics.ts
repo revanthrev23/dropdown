@@ -1,31 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 
-// export const useComics = (url: string, page: number, searchTerm?: string) => {
-//   return useQuery({
-//     queryKey: ["marvelCharacters", searchTerm, page],
-//     queryFn: async () => {
-//       const response = await fetch(`${url}?search=${searchTerm}&page=${page}`);
-//       if (!response.ok) {
-//         throw new Error("Error fetching data");
-//       }
-//       return response.json();
-//     },
-//   });
-// };
-
-// const fetchComics = async (url: string, page: number, searchTerm?: string) => {
-//   console.log({ page });
-//   const apiUrl = searchTerm
-//     ? `${url}&titleStartsWith=${searchTerm}&limit=${page}&offset=${page}`
-//     : `${url}&limit=20`;
-//   const response = await fetch(apiUrl);
-//   if (!response.ok) {
-//     throw new Error("Network response was not ok");
-//   }
-//   const data = await response.json();
-//   return data.data.results.map((title: string) => title);
-// };
-
 export const useComics = (
   url: string,
   limit: number = 10,
